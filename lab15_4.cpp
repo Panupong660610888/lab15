@@ -18,4 +18,19 @@ int main(){
 	return 0;
 }
 
-//Do not modify source code above this line
+void shuffle(int &a, int &b, int &c, int &d) {
+    int value = rand() % 4;
+    int temp;
+
+    switch (value) {
+        case 0:
+            temp = a; a = b; b = temp;
+        case 1:
+            temp = b; b = c; c = temp;
+        case 2:
+            temp = c; c = d; d = temp;
+        case 3:
+            temp = d; d = a; a = temp;
+            
+    }
+}
